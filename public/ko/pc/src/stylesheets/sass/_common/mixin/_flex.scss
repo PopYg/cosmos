@@ -7,7 +7,7 @@
 	-webkit-flex-wrap: $flexwrap;
 	flex-wrap: $flexwrap;
 }
-@mixin displayFlexCenter($align : center, $justify : center){
+@mixin displayFlexCenter($align : center, $justify : space-between){
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
