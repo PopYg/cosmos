@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/* Font style setting */
+$pretend: "Pretendard", Arial, Apple SD Gothic Neo, sans-serif;
+
+/* Point color setting */
+$yellow : #f9aa4c;
+$blue : #5b70eb;
+$blue2 : #46a6ff;
+$blue3 : #a8d0ff;
+$blue4 : #7c9dc5;
+$lightblue : #29d4fa;
+$red : #f60000;
+
+$purple1 : #8900f4;
+$purple2 : #d9a8ff;
+$pastelpurple : #a551e7;
+$pastelpurple2 : #ae92c9;
+
+$black : #000;
+$white : #fff;
+
+$subtitlegray : #a4a4a4;
+$gray1 : #4e4e4e;
+$gray2 : #222;
+$gray3 : #878787;
+$gray4 : #767676;
+$gray5 : #dbdbdb;
+$gray6 : #f5f5f5;
+ 
+/**
+ * BASE SETTING
+ */
+$base-font:$pretend;
+$base-font-size: 16px;
+$base-font-color : $white;
+$letter-spacing : 0;
+
+$regular : 400;
+$medium : 500;
+$semi : 600;
+$bold : 700;

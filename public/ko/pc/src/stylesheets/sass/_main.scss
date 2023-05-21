@@ -1,0 +1,26 @@
+@charset "UTF-8";
+#container.main {
+    article {
+        margin:vw(55) 0 0;
+        &:first-child {margin:vw(20) 0 0;}
+        h2 {
+            font-size:vw(22); line-height:vw(36);
+            @extend %clearfix;
+            i {
+                width:vw(36); height:vw(36); background-color:#414141; display:inline-block; position:relative; float:left;
+                @include borderRadius(vw(10));
+                img {
+                    width:vw(21); position:absolute; top:50%; left:50%;
+                    @include translate(-50%, -50%);
+                }
+            }
+            span {float:left; padding:0 0 0 vw(10);}
+
+            @include lightMode {
+                color:$black;
+                i {background-color:$gray6;}
+            }
+        }
+        .port_list_type01 {margin:vw(20) 0 0;}
+    }
+}

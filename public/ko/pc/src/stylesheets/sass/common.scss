@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+@import "./_common/base";
+@import "./main";
+@import "./layout";
+@import "./etc";
+
+/*
+  z-index 가이드 
+  container : auto
+  header :200
+  header dimmed :100
+*/
+
+//기본 스타일
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password],
+textarea,
+select {
+    outline:none !important;
+    @include transition(border-color, .2s);
+    &:focus { border-color:$blue !important;}
+}
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password] {
+    @include placeholder(em(15), #a4a4a4, auto);
+    &:disabled {
+        -webkit-text-fill-color:$black;
+        -webkit-opacity:1;
+    }
+}
+
+::selection { background:$blue; color:$white; text-shadow:none; }
+::-moz-selection { background:$blue; color:$white; text-shadow:none; }
+
+img { vertical-align:top; image-rendering:auto;}
+
+.popup_dimmed {
+    width:100%; height:100%; position:fixed; z-index:300; background-color:$black; display:none; top:0;
+    @include opacity(0);
+}
+caption { width:1px; height:1px; overflow:hidden; margin:-1px;}
+
+//히든 텍스트
+.hidden-txt,
+legend {overflow:hidden; display:inline-block; text-indent:-9999px; width:0; height:0; line-height:1px; position:absolute;}
+
+body {
+    background-color:#060606;
+    &.light_mode {background-color:$white;}
+}
+.color_mode_btn {
+    width:50%; color:$white; position:fixed; top:0; background-color:$blue; padding:20px 0; right:0;
+    @include opacity(.5);
+}
+
+//포트폴리오 타입1
+.port_list_type01 {
+    li {
+        margin:vw(15) 0 0; border:1px solid #3E3942; overflow:hidden;
+        @include borderRadius(vw(10));
+        &:first-child {margin:0;}
+    }
+    a {display:block;}
+    .tit_wrap {
+        padding:vw(15); border-bottom:1px solid #3E3942; line-height:vw(23); background-color:#242424;
+        @include displayFlexCenter(normal, space-between);
+        strong {width:60%; font-size:vw(16);}
+        .option_wrap {
+            font-size:vw(11);
+            p {
+                height:100%; display:inline-block; padding:0 vw(10); margin:0 0 0 vw(5);
+                @include borderRadius(vw(200));
+                @include boxSizing;
+            }
+            .option1 {color:$purple2; border:1px solid $purple2;}
+            .option2 {color:$blue3; border:1px solid $blue3;}
+        }
+    }
+    .detail_wrap {
+        padding:vw(5) vw(15) vw(10); line-height:vw(20);
+        dl {
+            padding:vw(5) 0 0;
+            @extend %clearfix;
+        }
+        dt {width:20%; color:#b9b9b9; font-size:vw(11); float:left;}
+        dd {
+            width:80%; font-size:vw(13); float:left;
+            em {display:inline-block; margin:0 vw(5) 0 0;}
+            .revenue {color:$red;}
+            .loss {color:$blue2;}
+        }
+    }
+
+    @include lightMode {
+        li {border:1px solid #e8e2ed;}
+        .tit_wrap {
+            border-bottom-color:#e8e2ed; background-color:#fbf6ff;
+            strong {color:$black;}
+            .option_wrap {
+                .option1 {color:$purple1; border:1px solid $purple1;}
+                .option2 {color:$blue2; border:1px solid $blue2;}
+            }
+        }
+        .detail_wrap {
+            dt {color:$subtitlegray;}
+            dd {
+                color:$black;
+                .loss {color:$blue;}
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

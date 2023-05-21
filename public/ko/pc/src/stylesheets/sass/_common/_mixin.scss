@@ -1,0 +1,134 @@
+@import "./mixin/prefixer";
+@import "./mixin/triangle";
+@import "./mixin/timing-functions";
+@import "./mixin/position";
+@import "./mixin/flex";
+@import "./mixin/text-overflow";
+@import "./mixin/transform";
+@import "./mixin/transition";
+
+@mixin borderRadius ($size) {
+    -webkit-border-radius: $size;
+       -moz-border-radius: $size;
+            border-radius: $size;
+}
+@mixin borderTopRadius($radii) {
+	border-top-left-radius: $radii;
+	border-top-right-radius: $radii;
+}
+@mixin borderRightRadius($radii) {
+	border-bottom-right-radius: $radii;
+	border-top-right-radius: $radii;
+}
+@mixin borderBottomRadius($radii) {
+	border-bottom-left-radius: $radii;
+	border-bottom-right-radius: $radii;
+}
+@mixin borderLeftRadius($radii) {
+	border-bottom-left-radius: $radii;
+	border-top-left-radius: $radii;
+}
+
+@mixin boxShadow($p) {
+	-moz-box-shadow:$p;
+	-webkit-box-shadow:$p;
+	box-shadow:$p;
+}
+@mixin boxSizing() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin backgroundSolt($x : 50%, $y : 50%, $repeat : no-repeat){
+	-ms-background-position-x:$x; background-position-x:$x;
+	-ms-background-position-y:$y; background-position-y:$y;
+	background-repeat:$repeat;
+}
+@mixin backgroundSoltC($x : 50%, $y : 50%, $repeat : no-repeat, $size : cover){
+	-ms-background-position-x:$x; background-position-x:$x;
+	-ms-background-position-y:$y; background-position-y:$y;
+	-webkit-background-size:$size; background-size:$size;
+	background-repeat:$repeat;
+}
+@mixin borderSet($width : 1px, $style : solid, $color : $gray2){
+	border-width:$width; border-style:solid; border-color:$color;
+}
+
+%clearfix {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin placeholder($font-size, $color, $line-height){
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: $color;
+		line-height: $line-height;
+		font-size: $font-size;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		color: $color;
+		line-height: $line-height;
+		font-size: $font-size;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+		color: $color;
+		line-height: $line-height;
+		font-size: $font-size;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+		color: $color;
+		line-height: $line-height;
+		font-size: $font-size;
+	}
+}
+
+@mixin scrollYellow(){
+	&::-webkit-scrollbar {width: 5px;}
+	&::-webkit-scrollbar-thumb {background: $yellow; border-radius: 10px; margin:0 em(5) 0 0;}
+	&::-webkit-scrollbar-track {background: $white;}
+}
+
+// desktop
+@mixin lightMode {
+	@at-root body.light_mode #{&} {
+		@content
+	}
+}
+@function decimal-round ($number, $digits: 0, $mode: round) {
+	$n: 1;
+	// $number must be a number
+	@if type-of($number) != number {
+		@warn '#{ $number } is not a number.';
+		@return $number;
+	}
+	// $digits must be a unitless number
+	@if type-of($digits) != number {
+		@warn '#{ $digits } is not a number.';
+		@return $number;
+	} @else if not unitless($digits) {
+		@warn '#{ $digits } has a unit.';
+		@return $number;
+	}
+	@for $i from 1 through $digits {
+		$n: $n * 10;
+	}
+	@if $mode == round {
+		@return calc(round($number * $n) / $n);
+	} @else {
+		@warn '#{ $mode } is undefined keyword.';
+		@return $number;
+	}
+}
+@function vw($size) {
+	$vwSize: (360 * 0.01);
+	@return decimal-round(calc($size / $vwSize) * 1vw, 2);
+}
