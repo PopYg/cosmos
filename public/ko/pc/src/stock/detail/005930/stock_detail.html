@@ -1,10 +1,395 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+@@include("../../../include/header.html")
+    <!--header back-->
+    <div class="header_back">
+        <div class="btn_wrap">
+            <button type="button" class="back_btn"></button>
+            <div class="like_btn">
+                <svg viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 22C12.8685 22 12.737 21.9668 12.6192 21.9002C12.4912 21.828 9.4509 20.1009 6.36696 17.4986C4.53915 15.9563 3.0801 14.4266 2.03046 12.952C0.672168 11.0439 -0.0108883 9.20858 0.000131223 7.49687C0.0130296 5.5051 0.742195 3.63198 2.05346 2.22249C3.38687 0.789254 5.16634 0 7.06418 0C9.49645 0 11.7202 1.33298 13 3.44458C14.2799 1.33303 16.5036 0 18.9359 0C20.7289 0 22.4395 0.712147 23.7529 2.00528C25.1943 3.42436 26.0132 5.42944 25.9998 7.50631C25.9888 9.21504 25.2929 11.0476 23.9316 12.9531C22.8787 14.4269 21.4217 15.9559 19.6011 17.4978C16.5284 20.0998 13.5099 21.8268 13.3829 21.899C13.2646 21.9663 13.1322 22 13 22Z" fill="#F70000"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!--//header back-->
 
-</body>
-</html>
+    <!--종목 상세-->
+    <div id="container" class="stock_detail">
+        <section class="sec01">
+            <h1>매커스</h1>
+            <p class="unit_txt"><span>093520</span> <span>KOSDAQ</span> <span>기계장비 및 관련 물품 도매업</span></p>
+            <!--하락 했으면 txt01, txt02 class loss 추가-->
+            <div class="txt_wrap">
+                <strong>11,240</strong>
+                <p class="txt01"><i></i> 650</p>
+                <p class="txt02">6.14%</p>
+                <p class="txt03">기준:23.05.16</p>
+            </div>
+            <div class="txt_wrap">
+                <strong>11,240</strong>
+                <p class="txt01 loss"><i></i> 650</p>
+                <p class="txt02 loss">6.14%</p>
+                <p class="txt03">기준:23.05.16</p>
+            </div>
+            <dl class="fit_box">
+                <dt>투자 적합도</dt>
+                <dd>20%</dd>
+            </dl>
+            
+            <div class="graph_wrap">
+                <div class="graph_box">
+                    <img src="../../../images/dummy_graph/graph01.jpg" alt="">
+                </div>
+                <div class="graph_txt">
+                    <dl>
+                        <dt>성장성:</dt>
+                        <dd>4.63</dd>
+                    </dl>
+                    <dl>
+                        <dt>안전성:</dt>
+                        <dd>2.67</dd>
+                    </dl>
+                    <dl>
+                        <dt>수익성:</dt>
+                        <dd>9.2</dd>
+                    </dl>
+                    <dl>
+                        <dt>활동성:</dt>
+                        <dd>6.39</dd>
+                    </dl>
+                    <dl>
+                        <dt>현금창출:</dt>
+                        <dd>2.01</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec02">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon01.svg" alt=""></i><span>재무 특성</span></h2>
+            <div class="graph_wrap">
+                <div class="graph_dummy"><p>그래프 작업 공간</p></div>
+            </div>
+            <div class="txt_wrap">
+                <dl>
+                    <dt>성장성:</dt>
+                    <dd>46</dd>
+                </dl>
+                <dl>
+                    <dt>안전성:</dt>
+                    <dd>29</dd>
+                </dl>
+                <dl>
+                    <dt>수익성:</dt>
+                    <dd>91</dd>
+                </dl>
+                <dl>
+                    <dt>활동성:</dt>
+                    <dd>62</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="sec03">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon02.svg" alt=""></i><span>배당</span></h2>
+            <div class="txt_wrap">
+                <dl>
+                    <dt>주당배당금:</dt>
+                    <dd>120원</dd>
+                </dl>
+                <dl>
+                    <dt>주당수익률:</dt>
+                    <dd>1.07%</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="sec04">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon03.svg" alt=""></i><span>컨센서스</span></h2>
+            <p class="disc">최근 3개월간 증권사에서 발표한 전망치의 평균값입니다.</p>
+            <div class="average_wrap">
+                <div class="progress_wrap">
+                    <!--적극매도 0%, 매도 25%, 중립 50%, 매수 70%, 적극매수 100%-->
+                    <div class="progress_bar" style="width: 50%;"></div>
+                </div>
+                <div class="txt_wrap">
+                    <p>적극 매도</p>
+                    <p>매도</p>
+                    <p>중립</p>
+                    <p>매수</p>
+                    <p>적극 매수</p>
+                </div>
+            </div>
+            <div class="target_price">
+                <dl>
+                    <dt>목표가: 23.05.23</dt>
+                    <dd>113,000원</dd>
+                </dl>
+                <dl>
+                    <dt>23.05.15</dt>
+                    <dd>123,000원</dd>
+                </dl>
+                <dl>
+                    <dt>23.05.10</dt>
+                    <dd>93,000원</dd>
+                </dl>
+                <dl>
+                    <dt>23.02.28</dt>
+                    <dd>293,000원</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="sec05">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon04.svg" alt=""></i><span>목표 수익율</span></h2>
+            <!--하락은 dd 에 class loss 추가-->
+            <div class="txt_wrap">
+                <dl>
+                    <dt>1주</dt>
+                    <dd>3.2%</dd>
+                </dl>
+                <dl>
+                    <dt>1개월</dt>
+                    <dd class="loss">-1.0%</dd>
+                </dl>
+                <dl>
+                    <dt>3개월</dt>
+                    <dd>14.2%</dd>
+                </dl>
+                <dl>
+                    <dt>1년</dt>
+                    <dd class="loss">-12.2%</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="sec06">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon05.svg" alt=""></i><span>투자 지표</span></h2>
+            <div class="graph_wrap">
+                <!--bar class 각각 높이 조절, 50 이하는 background-color #5b70eb-->
+                <div class="bar_wrap">
+                    <div class="bar01" style="height:25%; background-color:#5b70eb;"></div>
+                    <div class="bar02" style="height:50%;"></div>
+                    <div class="bar03" style="height:75%;"></div>
+                    <div class="bar04" style="height:100%;"></div>
+                </div>
+            </div>
+            <div class="txt_wrap">
+                <dl>
+                    <dt>PER</dt>
+                    <dd>6.06</dd>
+                </dl>
+                <dl>
+                    <dt>PBR</dt>
+                    <dd>1.35</dd>
+                </dl>
+                <dl>
+                    <dt>BPS</dt>
+                    <dd>8,312.00</dd>
+                </dl>
+                <dl>
+                    <dt>활동성:</dt>
+                    <dd>1854.00</dd>
+                </dl>
+                <dl>
+                    <dt>업종백분율</dt>
+                    <dd>69</dd>
+                </dl>
+                <dl>
+                    <dt>업종백분율</dt>
+                    <dd>45</dd>
+                </dl>
+                <dl>
+                    <dt>업종백분율</dt>
+                    <dd>81</dd>
+                </dl>
+                <dl>
+                    <dt>업종백분율</dt>
+                    <dd>83</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="sec07">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon06.svg" alt=""></i><span>주가 차트</span></h2>
+            <div class="category_wrap">
+                <div class="candle_line_wrap">
+                    <button type="button" class="active">캔들</button>
+                    <button type="button">라인</button>
+                </div>
+                <div class="date_wrap">
+                    <button type="button" class="active">일</button>
+                    <button type="button">주</button>
+                    <button type="button">월</button>
+                </div>
+            </div>
+            <div class="graph_wrap">
+                <div class="graph_dummy"><p>그래프 작업 공간</p></div>
+            </div>
+        </section>
+
+        <section class="sec08">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon07.svg" alt=""></i><span>공시 정보</span></h2>
+            <ul class="news_type03">
+                <li>
+                    <a href="">분기보고서 (2023.03)</a>
+                    <p>23.05.12</p>
+                </li>
+                <li>
+                    <a href="">임원/ 주요주 특정 증권등 소유상황 보고서</a>
+                    <p>23.05.12</p>
+                </li>
+                <li>
+                    <a href="">[기재정정] 상호변경 안내</a>
+                    <p>23.05.12</p>
+                </li>
+                <li>
+                    <a href="">사외이사의 선임 / 해임 또는 중도퇴임에 관한 내용사외이사의 선임 / 해임 또는 중도퇴임에 관한 내용사외이사의 선임 / 해임 또는 중도퇴임에 관한 내용사외이사의 선임 / 해임 또는 중도퇴임에 관한 내용</a>
+                    <p>23.05.12</p>
+                </li>
+            </ul>
+            <div class="center_btn_wrap">
+                <button type="button">더보기</button>
+            </div>
+        </section>
+
+        <section class="sec09">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon08.svg" alt=""></i><span>종목 뉴스</span></h2>
+            <ul class="news_type03">
+                <li>
+                    <a href="">분기보고서 (2023.03)</a>
+                    <p>23.05.12</p>
+                </li>
+                <li>
+                    <a href="">임원/ 주요주 특정 증권등 소유상황 보고서</a>
+                    <p>23.05.12</p>
+                </li>
+                <li>
+                    <a href="">[기재정정] 상호변경 안내</a>
+                    <p>23.05.12</p>
+                </li>
+                <li>
+                    <a href="">사외이사의 선임 / 해임 또는 중도퇴임에 관한 내용사외이사의 선임 / 해임 또는 중도퇴임에 관한 내용사외이사의 선임 / 해임 또는 중도퇴임에 관한 내용사외이사의 선임 / 해임 또는 중도퇴임에 관한 내용</a>
+                    <p>23.05.12</p>
+                </li>
+            </ul>
+            <div class="center_btn_wrap">
+                <button type="button">더보기</button>
+            </div>
+        </section>
+
+        <section class="sec10">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon09.svg" alt=""></i><span>금주의 투자의견</span></h2>
+        </section>
+
+        <section class="sec11">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon10.svg" alt=""></i><span>뉴스/반응 변화</span></h2>
+        </section>
+
+        <section class="sec12">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon11.svg" alt=""></i><span>뉴스 긍부정 반응</span></h2>
+        </section>
+
+        <section class="sec13">
+            <h2 class="tit_icon"><i><img src="../../../images/common/title_icon12.svg" alt=""></i><span>소셜 심리 변화</span></h2>
+        </section>
+
+        <section class="sec14">
+            <h2 class="tit_icon"><i><img src="../../../images/main/title_icon06.svg" alt=""></i><span>종목 영상</span></h2>
+            <div class="news_type02">
+                <ul>
+                    <li>
+                        <a href="">
+                            <div class="tit_wrap">
+                                <div class="thumb_wrap"><img src="../../../images/main/youtube_thumb01.jpg" alt=""></div>
+                                <div class="txt_wrap">
+                                    <strong>[씨젠] 에코프로 금양말고 이주식 사라</strong>
+                                    <div class="unit_txt">
+                                        <p>23.05.12</p>
+                                        <p class="view_txt"><img src="../../../images/main/views_icon.svg" alt=""> 0회</p>
+                                        <p class="time_txt"><img src="../../../images/main/time_icon.svg" alt=""> 39:49</p>
+                                        <p>거시적경제주식</p>
+                                        <p>11:12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="disc">
+                                주식은 멀티플로 거래되며 기업의 업의 본질이 중요합니다. <br>
+                                단기적인 주가는 인기 투표이며 업의 본질, 수급, 모멘텀 등을 고려하지 말고 투자해야 합니다. <br>
+                                채권은 금리에 영향을 받으며 듀레이션이 길수록 가격 변동성이 커집니다.
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="tit_wrap">
+                                <div class="thumb_wrap"><img src="../../../images/main/youtube_thumb02.jpg" alt=""></div>
+                                <div class="txt_wrap">
+                                    <strong>[씨젠] 에코프로 금양말고 이주식 사라 [씨젠] 에코프로 금양말고 이주식 사라 [씨젠] 에코프로 금양말고 이주식 사라</strong>
+                                    <div class="unit_txt">
+                                        <p>23.05.12</p>
+                                        <p class="view_txt"><img src="../../../images/main/views_icon.svg" alt=""> 0회</p>
+                                        <p class="time_txt"><img src="../../../images/main/time_icon.svg" alt=""> 39:49</p>
+                                        <p>거시적경제주식</p>
+                                        <p>11:12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="disc">
+                                주식은 멀티플로 거래되며 기업의 업의 본질이 중요합니다. <br>
+                                단기적인 주가는 인기 투표이며 업의 본질, 수급, 모멘텀 등을 고려하지 말고 투자해야 합니다. <br>
+                                채권은 금리에 영향을 받으며 듀레이션이 길수록 가격 변동성이 커집니다.
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="tit_wrap">
+                                <div class="thumb_wrap"><img src="../../../images/main/youtube_thumb03.jpg" alt=""></div>
+                                <div class="txt_wrap">
+                                    <strong>[씨젠] 에코프로 금양말고 이주식 사라</strong>
+                                    <div class="unit_txt">
+                                        <p>23.05.12</p>
+                                        <p class="view_txt"><img src="../../../images/main/views_icon.svg" alt=""> 0회</p>
+                                        <p class="time_txt"><img src="../../../images/main/time_icon.svg" alt=""> 39:49</p>
+                                        <p>거시적경제주식</p>
+                                        <p>11:12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="disc">
+                                주식은 멀티플로 거래되며 기업의 업의 본질이 중요합니다. <br>
+                                단기적인 주가는 인기 투표이며 업의 본질, 수급, 모멘텀 등을 고려하지 말고 투자해야 합니다. <br>
+                                채권은 금리에 영향을 받으며 듀레이션이 길수록 가격 변동성이 커집니다.
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="tit_wrap">
+                                <div class="thumb_wrap"><img src="../../../images/main/youtube_thumb04.jpg" alt=""></div>
+                                <div class="txt_wrap">
+                                    <strong>[씨젠] 에코프로 금양말고 이주식 사라</strong>
+                                    <div class="unit_txt">
+                                        <p>23.05.12</p>
+                                        <p class="view_txt"><img src="../../../images/main/views_icon.svg" alt=""> 0회</p>
+                                        <p class="time_txt"><img src="../../../images/main/time_icon.svg" alt=""> 39:49</p>
+                                        <p>거시적경제주식</p>
+                                        <p>11:12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="disc no_disc">
+                                해당 영상은 내용 요약이 없습니다.
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!--//종목 상세-->
+
+@@include("../../../include/footer.html", {
+    "depth02":"'active'",
+    "depth05":"'nav_center'"
+})

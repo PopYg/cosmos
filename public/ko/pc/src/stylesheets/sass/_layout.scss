@@ -13,6 +13,29 @@
     }
 }
 
+.header_back {
+    padding:vw(15);
+    .btn_wrap {
+        @extend %clearfix;
+        .back_btn {
+            width:vw(13); height:vw(13); float:left; border-left:2px solid $white; border-bottom:2px solid $white; margin:vw(5) 0 0;
+            @include rotate(45);
+            @include borderRadius(2px);
+        }
+        .like_btn {
+            float:right;
+            svg {
+                width:vw(26);
+                /*path {fill:#B9B9B9;}*/
+            }
+        }
+    }
+
+    @include lightMode {
+        .btn_wrap .back_btn {border-left-color:$black; border-bottom-color:$black;}
+    }
+}
+
 #bottomNav {
     width:100%; height:vw(46); padding:0 vw(15); background-color:$gray2; border-top:1px solid #4d4d4d; position:fixed; bottom:0; left:0;
     @include boxSizing;
@@ -40,15 +63,18 @@
         }
     }
     .nav_center {
-        position:absolute; bottom:2px; left:50%;
+        width:vw(60); height:vw(60); position:absolute; bottom:2px; left:50%; background-image:url(../../images/layout/logo_gray.svg);
+        @include backgroundSoltC;
         @include translate(-50%, 0);
-        img {width:vw(60);}
+        img { display:none;}
+        &.active img {display:block;}
     }
 
     @include lightMode {
         background-color:$white; border-top-color:#e2e9ed;
         a {
-            color:$subtitlegray;
+            color:#afafaf;
+            svg path {fill:#afafaf}
             &.active {
                 svg path {fill:$purple1}
                 color:$purple1;

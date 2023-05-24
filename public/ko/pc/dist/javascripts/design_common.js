@@ -1,27 +1,24 @@
 "use strict";
-var winW;
-var winH;
-var $window = $(window);
-var winSc = $(window).scrollTop();
-var $dimmed = $("#dimmed");
-$window.load(function () {
-    var _this = $(this);
-    winW = _this.width();
-    winH = _this.height();
-    winSc = _this.scrollTop();
-    $window.on("resize", function () {
-        winW = _this.width();
-        winH = _this.height();
-    });
-    _this.trigger("resize");
-    $(window).scroll(function () {
-        winSc = _this.scrollTop();
-    });
 
-    layout();
-    sub();
-});
+const $candleLineBtn = document.querySelectorAll('.candle_line_wrap button');
+for (const button of $candleLineBtn) {
+    button.addEventListener('click', function() {
+        $candleLineBtn.forEach(function(removeBtn){
+            removeBtn.classList.remove("active");
+        });
+        button.classList.add("active");
+    });
+}
 
+const $dateBtn = document.querySelectorAll('.date_wrap button');
+for (const button of $dateBtn) {
+    button.addEventListener('click', function() {
+        $dateBtn.forEach(function(removeBtn){
+            removeBtn.classList.remove("active");
+        });
+        button.classList.add("active");
+    });
+}
 function layout(){
 
 }
